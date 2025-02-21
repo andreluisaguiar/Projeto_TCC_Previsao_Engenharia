@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
-import coleta
-import duplicata
-import outliers  
-import analise  
-import previsao 
+import src.data_collection as data_collection
+import src.data_duplicate as data_duplicate
+import src.data_outliers as data_outliers  
+import src.data_analysis as data_analysis  
+import src.data_prediction as data_prediction 
 import webbrowser  # Para abrir links no navegador
 import io
 
@@ -34,7 +34,7 @@ def main():
         if st.button("Buscar Monografias"):
             if url_input:
                 st.write("Iniciando a extração...")
-                excel_data = coleta.scrape_monografias(url_input)
+                excel_data = data_collection.scrape_monografias(url_input)
                 if excel_data:
                     st.download_button(
                         label="Baixar Arquivo Excel",
@@ -48,7 +48,7 @@ def main():
     elif escolha == "Remoção de Duplicatas":
         st.write("Você escolheu Remoção de Duplicatas.")
         # Chama a funcionalidade de remoção de duplicatas
-        duplicata.exibir_remocao_duplicatas()
+        data_duplicate.exibir_remocao_duplicatas()
 
     elif escolha == "Detecção de Outliers":
         st.write("Você escolheu Detecção de Outliers.")
@@ -62,7 +62,7 @@ def main():
 
     elif escolha == "Predição de engenharia":
         st.write("Você escolheu Predição de engenharia.")
-        previsao.previsao()  # Alterado para chamar a função correta do módulo previsao
+        data_prediction.previsao()  # Alterado para chamar a função correta do módulo previsao
 
 
 # Função para exibir a detecção de outliers no Streamlit
@@ -91,7 +91,7 @@ def exibir_outliers():
             st.error("As colunas devem ser exclusivamente 'titulo' e 'engenharia'. Por favor, selecione as colunas corretas.")
         else:
             # Detectar outliers
-            df_outliers, df_sem_outliers = outliers.detectar_outliers_titulos(df, titulo_col, engenharia_col)
+            df_outliers, df_sem_outliers = data_outliers.detectar_outliers_titulos(df, titulo_col, engenharia_col)
 
             # Exibir os outliers
             st.write("Outliers detectados:")
@@ -137,7 +137,7 @@ def exibir_analise_predicao():
         df = pd.read_excel(uploaded_file)
 
         # Chama a função do módulo de Treinamento E Predição
-        analise.analise_predicao(df)
+        data_analysis.analise_predicao(df)
 
 if __name__ == "__main__":
     main()
