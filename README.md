@@ -1,4 +1,4 @@
-# Projeto de TCC: Previsão de Escolha de Engenharia a Partir de Títulos de TCC no BICT
+# Projeto de TCC: Processamento de Linguagem Natural Aplicado à Predição de Trajetórias Acadêmicas no BICT - UFMA
 
 Este projeto utiliza técnicas de Processamento de Linguagem Natural (PLN) para prever a escolha de engenharia a partir de títulos de Trabalhos de Conclusão de Curso (TCC) no Bacharelado Interdisciplinar em Ciência e Tecnologia (BICT).
 
