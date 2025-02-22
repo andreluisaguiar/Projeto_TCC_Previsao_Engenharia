@@ -15,9 +15,9 @@ def menu():
         ("Coleta de Dados", "Remoção de Duplicatas", "Detecção de Outliers", "Analises e Treinamento","Predição de engenharia")
     )
     
-    # Adicionando o botão para abrir o outro projeto de Análise Descritiva
-    if st.sidebar.button("IR PARA ANÁLISE DESCRITIVA"):
-        webbrowser.open("http://localhost:8502", new=2)  # Isso abrirá o link em uma nova aba do navegador
+    # # Adicionando o botão para abrir o outro projeto de Análise Descritiva
+    # if st.sidebar.button("IR PARA ANÁLISE DESCRITIVA"):
+    #     webbrowser.open("http://localhost:8502", new=2)  # Isso abrirá o link em uma nova aba do navegador
 
     return option
 
