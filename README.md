@@ -25,3 +25,4 @@ Este projeto utiliza técnicas de Processamento de Linguagem Natural (PLN) para 
    git clone https://github.com/andreluisaguiar/Projeto_TCC_Previsao_Engenharia.git
    cd Projeto_TCC_Previsao_Engenharia
 
+teste
