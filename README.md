@@ -26,3 +26,5 @@ Este projeto utiliza técnicas de Processamento de Linguagem Natural (PLN) para 
    cd Projeto_TCC_Previsao_Engenharia
 
 teste
+
+teste 2
